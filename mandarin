@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en"> 
+ <head> 
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Мандарин Кликер</title> 
+  <style>
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f0f0f0;
+    }
+    #images {
+        width: 200px;
+        height: 200px;
+        background-image: url('/storage/emulated/0/Download/images.png'); /* Путь к изображению мандарина */
+        background-size: cover;
+        cursor: pointer;
+    }
+    #counter {
+        font-size: 24px;
+        margin-top: 20px;
+    }
+</style> 
+ </head> 
+ <body> 
+  <div id="images" onclick="incrementCounter()"></div> 
+  <div id="counter">
+    Количество кликов: <span id="count">0</span> 
+  </div> 
+  <script>
+    let clickCount = 0;
+
+    function incrementCounter() {
+        clickCount++;
+        document.getElementById('count').textContent = clickCount;
+    }
+</script> 
+ </body>
+</html>
